@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOmag, des jeux neufs pour Thomson TO8, TO9 et TO9+</title>
+<meta name="description" content="Deux jeux neufs et gratuits pour les ordinateurs Thomson TO8, TO9 et TO9+ : TOetris et TOboum. Téléchargez la disquette et jouez dans l'émulateur DCMOTO.">
+<meta name="theme-color" content="#ffe600">
+<meta property="og:title" content="TOmag, des jeux neufs pour Thomson TO8, TO9 et TO9+">
+<meta property="og:description" content="TOetris et TOboum : deux jeux gratuits pour votre Thomson, à lancer dans DCMOTO en trois étapes.">
+<meta property="og:image" content="https://sebjvproj.github.io/img/toboum-boite.jpg">
+<meta property="og:type" content="website">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffe600'/%3E%3Cpath d='M3 4h10v2H9v7H7V6H3z' fill='%23111114'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-rubrique="accueil">
+<a class="lien-evitement" href="#comment">Aller directement au mode d'emploi</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-disquette" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 3h13l3 3v15H4z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8 3v5h7V3M7 21v-7h10v7"/><path fill="currentColor" d="M12 4h2v3h-2z"/></symbol>
+  <symbol id="i-droite" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-sortie" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M14 4h6v6M20 4l-9 9M17 14v6H4V7h6"/></symbol>
+</svg>
+
+<main>
+  <section class="couverture" aria-labelledby="titre-revue">
+    <div class="cadre">
+      <h1 class="logo-revue" id="titre-revue">TO<span class="mag">mag</span></h1>
+      <div class="sous-logo">
+        <span>Des jeux neufs pour Thomson TO8 · TO9 · TO9+</span>
+        <span>N° 1 · Octobre 2026</span>
+      </div>
+
+      <p class="gratuit" aria-hidden="true"><span>Prix</span><b>Gratuit</b></p>
+      <p class="une">Deux jeux écrits en 2026 pour votre Thomson, à lancer en trois étapes.</p>
+
+      <div class="sujets">
+        <article class="sujet" aria-labelledby="sujet-toetris">
+          <a class="image" href="/toetris/" tabindex="-1" aria-hidden="true">
+            <img src="img/toetris-boite.jpg" width="1200" height="900" alt="">
+          </a>
+          <p class="sujet-bande"><span>Boîte imaginaire, générée par une IA</span><span>Test p. 12</span></p>
+          <h2 id="sujet-toetris"><a href="/toetris/">TOetris</a></h2>
+          <p>Le jeu de blocs de la Game Boy, réécrit en assembleur pour le TO9 : mêmes règles, mêmes vitesses, trois musiques.</p>
+          <div class="liens">
+            <a class="bouton" href="https://github.com/sebjvproj/toetris/releases/latest/download/TOETRIS.fd" download>
+              <svg aria-hidden="true"><use href="#i-disquette"/></svg>
+              <span>Disquette TOETRIS.fd</span>
+            </a>
+            <a href="/toetris/">Lire le test et le mode d'emploi</a>
+          </div>
+        </article>
+
+        <article class="sujet" aria-labelledby="sujet-toboum">
+          <a class="image" href="/toboum-to9/" tabindex="-1" aria-hidden="true">
+            <img src="img/toboum-boite.jpg" width="1200" height="800" alt="">
+          </a>
+          <p class="sujet-bande"><span>Boîte imaginaire, générée par une IA</span><span>Test p. 18</span></p>
+          <h2 id="sujet-toboum"><a href="/toboum-to9/">TOboum</a></h2>
+          <p>Toto et sa casquette à hélice ramassent les bombes de l'Égypte au Mont-Saint-Michel. Un jeu de plates-formes inspiré de Bomb Jack.</p>
+          <div class="liens">
+            <a class="bouton" href="https://github.com/sebjvproj/toboum-to9/releases/latest/download/TOBOUM.fd" download>
+              <svg aria-hidden="true"><use href="#i-disquette"/></svg>
+              <span>Disquette TOBOUM.fd</span>
+            </a>
+            <a href="/toboum-to9/">Lire le test et le mode d'emploi</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rubrique" id="comment" aria-labelledby="titre-comment">
+    <div class="cadre">
+      <div class="titre-rubrique">
+        <h2 id="titre-comment">Comment jouer ?</h2>
+        <div class="regle" aria-hidden="true"></div>
+      </div>
+      <p class="intro-rubrique">Pas besoin d'un vrai TO9 : l'émulateur gratuit DCMOTO transforme votre PC en Thomson. Le mode d'emploi détaillé se trouve sur la page de chaque jeu.</p>
+
+      <ol class="etapes">
+        <li class="etape">
+          <div class="etape-tete">
+            <span class="numero" aria-hidden="true">1</span>
+            <h3>Installez DCMOTO</h3>
+          </div>
+          <p>Téléchargez l'émulateur, décompressez-le et lancez <b>dcmoto.exe</b>. Il fonctionne sous Windows, et sur Mac ou Linux avec Wine.</p>
+          <div class="appel">
+            <a class="bouton-sec" href="http://dcmoto.free.fr/emulateur/index.html">Télécharger DCMOTO <svg aria-hidden="true"><use href="#i-sortie"/></svg></a>
+          </div>
+        </li>
+        <li class="etape">
+          <div class="etape-tete">
+            <span class="numero" aria-hidden="true">2</span>
+            <h3>Insérez la disquette</h3>
+          </div>
+          <p>Choisissez la machine <b>TO9</b>, <b>TO8</b> ou <b>TO9+</b>, puis chargez le fichier <b>.fd</b> du jeu comme disquette.</p>
+        </li>
+        <li class="etape">
+          <div class="etape-tete">
+            <span class="numero" aria-hidden="true">3</span>
+            <h3>Tapez RUN</h3>
+          </div>
+          <p>Sur TO9, choisissez <b>3 - BASIC 128</b> au menu (BASIC 512 sur TO8 et TO9+), puis tapez la commande du jeu.</p>
+          <div class="appel">
+            <pre class="listing" aria-label="Commandes : RUN guillemet TOETRIS guillemet, ou RUN guillemet TOBOUM guillemet"><span class="ligne">RUN"TOETRIS"</span><span class="ligne">RUN"TOBOUM"</span></pre>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="rubrique coulisses" aria-labelledby="titre-qui">
+    <div class="cadre">
+      <div class="titre-rubrique">
+        <h2 id="titre-qui">Qui fait ces jeux ?</h2>
+        <div class="regle" aria-hidden="true"></div>
+      </div>
+      <div class="article">
+        <div class="texte">
+          <p>Ces jeux sont des projets d'amateur, écrits en 2026 pour des machines sorties en 1985 et 1986. Ils sont programmés en assembleur 6809, comme à l'époque, et entièrement « vibecodés » avec <a href="https://claude.ai">Claude</a>, l'assistant d'Anthropic.</p>
+          <p>Tout est gratuit et libre (licence MIT) : les disquettes, mais aussi le code source, pour qui veut voir comment on fait bouger un TO9.</p>
+        </div>
+        <ul class="marge-droite puces-techniques">
+          <li><b>TOetris</b><a href="https://github.com/sebjvproj/toetris">Code source sur GitHub</a></li>
+          <li><b>TOboum</b><a href="https://github.com/sebjvproj/toboum-to9">Code source sur GitHub</a></li>
+          <li><b>DCMOTO</b>L'émulateur de Daniel Coulom, sur <a href="http://dcmoto.free.fr/">dcmoto.free.fr</a>.</li>
+        </ul>
+      </div>
+      <div class="mentions">
+        <p>Projets amateurs sans lien avec Thomson, The Tetris Company, Nintendo, Koei Tecmo, France Image Logiciel ou Infogrames. Tetris est une marque de The Tetris Company ; Bomb Jack est une marque de Koei Tecmo. Les boîtes montrées ici sont imaginaires et ont été générées par une IA.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <span class="titre-revue"><b>TOmag</b></span>
+    <span>Des jeux neufs pour Thomson TO8, TO9 et TO9+</span>
+    <nav aria-label="Liens">
+      <a href="/toetris/">TOetris</a>
+      <a href="/toboum-to9/">TOboum</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

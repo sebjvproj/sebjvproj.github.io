@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>retro-filter: your windows in 1980s PC colors</title>
+<meta name="description" content="retro-filter shows any Windows window (a game, a video, a web page) in 4-color CGA or 16-color EGA, live. Free and open source.">
+<meta name="theme-color" content="#0c0c14">
+<meta property="og:title" content="retro-filter: your windows in 1980s PC colors">
+<meta property="og:description" content="A game, a video, a web page: watch them in CGA or EGA, live. Free and open source.">
+<meta property="og:image" content="https://sebjvproj.github.io/retro-filter/img/banniere.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sebjvproj.github.io/retro-filter/en/">
+<link rel="alternate" hreflang="fr" href="https://sebjvproj.github.io/retro-filter/">
+<link rel="alternate" hreflang="en" href="https://sebjvproj.github.io/retro-filter/en/">
+<link rel="preload" href="../fonts/doto.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%230c0c14'/%3E%3Crect x='1' y='1' width='14' height='11' fill='%23fff'/%3E%3Crect x='2' y='2' width='12' height='9' fill='%23000'/%3E%3Crect x='3' y='3' width='10' height='4' fill='%2355ffff'/%3E%3Crect x='3' y='7' width='10' height='3' fill='%23ff55ff'/%3E%3Crect x='6' y='12' width='4' height='1' fill='%23fff'/%3E%3Crect x='3' y='13' width='10' height='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="evitement" href="#utiliser">Skip to the instructions</a>
+
+<header class="tete">
+  <div class="cadre">
+    <nav class="langues" aria-label="Language">
+      <a href="../" lang="fr" hreflang="fr">Français</a>
+      <a href="./" aria-current="page">English</a>
+    </nav>
+    <p class="invite" aria-hidden="true">C:\&gt;</p>
+    <h1>retro-filter</h1>
+    <p class="accroche">Any Windows window, in the colors of a 1980s PC.</p>
+    <p class="sous-accroche">A game, a video, a web page: retro-filter shows them in CGA or EGA, live, without installing anything into the program you filter.</p>
+  </div>
+</header>
+
+<main>
+  <section class="demo" aria-labelledby="titre-demo">
+    <div class="cadre">
+      <h2 id="titre-demo">Try it here</h2>
+      <p class="chapeau">Drag the bar to compare, then switch card, mode and palette, just like in the app. The images come from the app itself.</p>
+
+      <div class="ecran" id="ecran">
+        <div class="couche filtre" id="couche-filtre" role="img" aria-label="The scene filtered by retro-filter"></div>
+        <div class="couche origine" role="img" aria-label="The original scene: a sunset over a grid"></div>
+        <span class="etiquette gauche" aria-hidden="true">Original</span>
+        <span class="etiquette droite" aria-hidden="true">Filtered</span>
+        <span class="poignee" aria-hidden="true"></span>
+        <input class="glissiere" id="glissiere" type="range" min="0" max="100" value="50" aria-label="Share of the original image shown, in percent">
+      </div>
+
+      <div class="reglages">
+        <div class="reglage">
+          <span class="nom" id="nom-carte">Card</span>
+          <div class="choix" id="choix-carte" role="group" aria-labelledby="nom-carte"></div>
+          <span class="detail" id="detail-carte"></span>
+        </div>
+        <div class="reglage">
+          <span class="nom" id="nom-mode">Mode</span>
+          <div class="choix" id="choix-mode" role="group" aria-labelledby="nom-mode"></div>
+          <span class="detail" id="detail-mode"></span>
+        </div>
+        <div class="reglage">
+          <span class="nom" id="nom-palette">Palette</span>
+          <div class="choix" id="choix-palette" role="group" aria-labelledby="nom-palette"></div>
+          <span class="detail" id="detail-palette"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atouts" aria-labelledby="titre-atouts">
+    <div class="cadre">
+      <h2 id="titre-atouts">What it does</h2>
+      <ul class="grille">
+        <li>
+          <h3>Nothing to install in the game</h3>
+          <p>The filter sits on top of the window. It changes nothing and injects nothing into the program you filter.</p>
+        </li>
+        <li>
+          <h3>Play as usual</h3>
+          <p>The window keeps the keyboard and the mouse: clicks go straight through the filter.</p>
+        </li>
+        <li>
+          <h3>Whole window or one area</h3>
+          <p>Draw a rectangle with the mouse to filter only the video on a web page, without the tabs or the comments.</p>
+        </li>
+        <li>
+          <h3>Fast</h3>
+          <p>The work is done on the graphics card: 1 to 4 milliseconds per frame at 1920×1080.</p>
+        </li>
+        <li>
+          <h3>Private</h3>
+          <p>No network access. The images stay on your machine.</p>
+        </li>
+        <li>
+          <h3>Free and open source</h3>
+          <p>MIT license: the source code is open to anyone who wants to read it or reuse it.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="utiliser" id="utiliser" aria-labelledby="titre-utiliser">
+    <div class="cadre deux-colonnes">
+      <div>
+        <h2 id="titre-utiliser">How to use it</h2>
+        <ol class="etapes">
+          <li>
+            <h3>Open what you want to filter</h3>
+            <p>For a game, pick <b>windowed</b> or <b>borderless windowed</b> mode in its display options.</p>
+          </li>
+          <li>
+            <h3>Pick the window and the style</h3>
+            <p>The window in the list, then the card, the mode and the palette. The swatches show the colors.</p>
+          </li>
+          <li>
+            <h3>Apply the filter</h3>
+            <p>Click the big <b>Apply the filter</b> button, or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> in the window to filter. The same shortcut removes it.</p>
+          </li>
+        </ol>
+      </div>
+      <img class="capture" src="../img/fenetre-en.png" width="675" height="723" loading="lazy" alt="The retro-filter window: the list of open windows, the card, mode and palette buttons, and the big Apply the filter button">
+    </div>
+  </section>
+
+  <section class="obtenir" aria-labelledby="titre-obtenir">
+    <div class="cadre">
+      <h2 id="titre-obtenir">Get it</h2>
+      <p class="chapeau">retro-filter is a working prototype. There is no ready-made download yet: you build it from the source code, with the .NET 8 SDK.</p>
+      <pre class="listing" aria-label="Commands to build and run retro-filter"><span>git clone https://github.com/sebjvproj/retro-filter</span><span>cd retro-filter\src\RetroFilter</span><span>dotnet build</span></pre>
+      <p class="liens">
+        <a class="bouton" href="https://github.com/sebjvproj/retro-filter">Source code on GitHub</a>
+        <a href="https://github.com/sebjvproj/retro-filter#readme">Read the full instructions</a>
+      </p>
+      <ul class="limites">
+        <li>You need Windows 10 or 11 and a graphics card that supports Direct3D 11.</li>
+        <li>A game in exclusive fullscreen cannot be filtered: switch it to borderless windowed.</li>
+        <li>Protected videos from paid streaming services come out black.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <span><b>retro-filter</b> · MIT license</span>
+    <nav aria-label="Links">
+      <a href="https://github.com/sebjvproj/retro-filter">Source code</a>
+      <a href="/en/">Other projects</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

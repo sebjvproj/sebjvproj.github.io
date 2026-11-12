@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sebjvproj, personal projects</title>
+<meta name="description" content="Projects by sebjvproj: games for Thomson computers, a retro filter for Windows and other experiments.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111114" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://sebjvproj.github.io/en/">
+<link rel="alternate" hreflang="fr" href="https://sebjvproj.github.io/">
+<link rel="alternate" hreflang="en" href="https://sebjvproj.github.io/en/">
+<link rel="preload" href="../assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23111114'/%3E%3Crect x='4' y='4' width='3' height='8' fill='%23fff'/%3E%3Crect x='9' y='4' width='3' height='3' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  @font-face {
+    font-family: "Archivo";
+    src: url("../assets/archivo.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+  }
+  :root {
+    color-scheme: light dark;
+    --fond: #ffffff;
+    --encre: #111114;
+    --doux: #5a5a66;
+    --filet: #e2e2e8;
+    --survol: #f4f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fond: #111114;
+      --encre: #f2f2f5;
+      --doux: #a4a4b0;
+      --filet: #2c2c33;
+      --survol: #1b1b20;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--encre);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  ::selection { background: var(--encre); color: var(--fond); }
+  :focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+  a { color: inherit; text-underline-offset: 0.18em; }
+  .page {
+    width: min(100% - 32px, 44rem);
+    margin: 0 auto;
+    padding: clamp(3rem, 12vh, 7rem) 0 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    margin: 0;
+    font-stretch: 75%;
+    font-weight: 900;
+    font-size: clamp(2.75rem, 9vw, 4.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+  .intro {
+    margin: 1rem 0 0;
+    color: var(--doux);
+    max-width: 42ch;
+  }
+  h2 {
+    margin: clamp(3rem, 8vh, 4.5rem) 0 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--encre);
+    font-stretch: 75%;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .projets { list-style: none; margin: 0; padding: 0; }
+  .projets li { border-bottom: 1px solid var(--filet); }
+  .projet {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+    padding: 1.4rem 0.75rem;
+    margin: 0 -0.75rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 160ms ease-out;
+  }
+  .projet:hover { background: var(--survol); }
+  .projet b {
+    font-stretch: 75%;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+  .projet span { grid-column: 1; color: var(--doux); }
+  .projet svg {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .projet:hover svg { transform: translateX(4px); }
+  .bientot { padding: 1.4rem 0; color: var(--doux); font-size: 1rem; }
+  footer {
+    margin-top: auto;
+    padding-top: 4rem;
+    font-size: 0.95rem;
+    color: var(--doux);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+  }
+  .langues { display: flex; gap: 1rem; }
+  .langues [aria-current] { color: var(--encre); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>sebjvproj</h1>
+    <p class="intro">Personal projects, published as they come.</p>
+  </header>
+
+  <main>
+    <h2 id="titre-projets">Projects</h2>
+    <ul class="projets" aria-labelledby="titre-projets">
+      <li>
+        <a class="projet" href="/toproj/">
+          <b>TOproj</b>
+          <span>Brand-new games for the Thomson TO8, TO9 and TO9+ computers: TOetris and TOboum. In French.</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="projet" href="/retro-filter/en/">
+          <b>retro-filter</b>
+          <span>A Windows app that shows any window, game or video, in the colors of a 1980s PC.</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </li>
+    </ul>
+    <p class="bientot">More projects will land here.</p>
+  </main>
+
+  <footer>
+    <a href="https://github.com/sebjvproj">github.com/sebjvproj</a>
+    <nav class="langues" aria-label="Language">
+      <a href="/" lang="fr" hreflang="fr">Français</a>
+      <a href="/en/" aria-current="page">English</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>

@@ -145,6 +145,7 @@ h3 {
   max-width: 68ch;
   color: var(--gris);
 }
+.chapeau b { color: var(--blanc); }
 
 /* --- Démonstration --- */
 
